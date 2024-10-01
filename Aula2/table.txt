@@ -1,0 +1,7 @@
+N   | Version  |  Time  |  CPI  |     #I     |   L1_DMiss (Estimated)  |  L1_DMiss  |  Miss/#I 
+512 |  base()  | 0.4913 | 1.09  | 1105374077 |         151027712       |  141827619 | 0.1283
+512 | transp() | 0.1761 | 0.43  |  972472124 |          33587200       |   17195286 | 0.0177
+                                                        
+Estimativa melhor da versão da transposta: (N^3)/8 + ((N^2)/8)*2 = 16842752
+
+isto porque o acesso a linha da matriz A não depende do j, só de i e k: "A[i*size+k]"
